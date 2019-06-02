@@ -1,0 +1,13 @@
+---
+MOTD_CONTACT: sysadmin@lanets.ca
+
+# Name of the interfaces to read the Ip Adresses.
+MOTD_PRIVATE_INTERFACE: x
+MOTD_PUBLIC_INTERFACE: x
+
+# Welcome message and font. Select a font here: http://www.figlet.org/fontdb.cgi
+MOTD_WELCOME_FONT: banner3
+MOTD_WELCOME: DHMTL
+
+# Users to disable default motd
+users: []

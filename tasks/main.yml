@@ -1,0 +1,47 @@
+---
+- name: Install the prerequisite packages for the MOTD scripts.
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - lsb-release
+    - fortunes
+  when: ansible_os_family == 'Debian'
+
+- name: Install the prerequisite packages for the MOTD scripts.
+  package:
+    name: epel-release
+    state: present
+  when: ansible_os_family == 'RedHat'
+
+- name: Install the prerequisite packages for the MOTD scripts.
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - figlet
+    - cowsay
+
+- name: Add figlet font to OS.
+  get_url:
+    url: "http://www.figlet.org/fonts/{{ MOTD_WELCOME_FONT }}.flf"
+    dest: /opt/
+    mode: 0644
+
+- name: Template motd file.
+  template:
+    src: "etc/profile.d/motd.sh"
+    dest: /etc/profile.d/motd.sh
+    mode: 0755
+    owner: root
+    group: root
+
+- name: Disable default login message.
+  file:
+    path: /home/{{ item.username }}/.hushlogin
+    owner: "{{ item.username }}"
+    mode: 0755
+    state: touch
+  loop: '{{ users }}'
+  register: touch_log
+  changed_when: touch_log.diff.before.state != "file"
