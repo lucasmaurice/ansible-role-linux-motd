@@ -95,4 +95,4 @@ root@djls-domotic:~$
 License
 -------
 
-MIT
+WTFPL

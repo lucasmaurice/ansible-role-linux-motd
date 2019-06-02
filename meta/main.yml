@@ -2,9 +2,9 @@
 galaxy_info:
   author: sonic
   description: This role is suposed to install the default and standardized linux MOTD on our systems.
-  company: dhmtl
+  company: djls
 
-  license: MIT
+  license: WTFPL
 
 
   # If the issue tracker for your role is not on github, uncomment the next line and provide a value
