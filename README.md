@@ -75,8 +75,9 @@ Running on Debian GNU/Linux 9 with kernel 4.15.17-1-pve
  █ Uptime..............: 5d 17h 30m 31s
  █ CPU usage...........: 0.52, 0.39, 0.40
  █ Memory used.........: 257 MB / 1024 MB
- █ Swap in use.........: 0 MB
- █ Private IP..........: 192.168.1.221/24 / 192.168.1.255
+ █ Swap in use.........: 0 MB 
+ █ IP on Internet......: 189.178.145.123
+ █ Private IP..........: 192.168.1.123/24 / 192.168.1.255
 
  ____________________________________
 / First Law of Bicycling:            \
