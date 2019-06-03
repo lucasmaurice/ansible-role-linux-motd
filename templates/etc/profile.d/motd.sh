@@ -56,6 +56,10 @@ if [ ! "$PRIVATE_INTERFACE" == "x" ]; then
   PRIVATE_IP=`ip addr show dev $PRIVATE_INTERFACE | grep "inet " | awk '{print $2" / "$4}'`
 fi
 
+# Internet Infos
+INTERNET_IP=$(curl ifconfig.co)
+
+
 # Disk over threshold
 DISK_OT=`df -P | awk '0+$5 >= '$DISK_WARN_THRESHOLD' {print}'`
 
@@ -74,6 +78,10 @@ echo -e " ${COLOR_ACCENT}█${COLOR_RESET} Uptime..............: $UPTIME"
 echo -e " ${COLOR_ACCENT}█${COLOR_RESET} CPU usage...........: $LOAD_1, $LOAD_5, $LOAD_15"
 echo -e " ${COLOR_ACCENT}█${COLOR_RESET} Memory used.........: $MEMORY_USED / $MEMORY_TOTAL"
 echo -e " ${COLOR_ACCENT}█${COLOR_RESET} Swap in use.........: $SWAP_USED"
+
+if [ ! "$INTERNET_IP" == "" ]; then
+  echo -e " ${COLOR_ACCENT}█${COLOR_RESET} IP on Internet......: $INTERNET_IP"
+fi
 
 if [ ! "$PUBLIC_IP" == "" ]; then
   echo -e " ${COLOR_ACCENT}█${COLOR_RESET} Public IP...........: $PUBLIC_IP"
