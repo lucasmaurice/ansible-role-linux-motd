@@ -57,7 +57,7 @@ if [ ! "$PRIVATE_INTERFACE" == "x" ]; then
 fi
 
 # Internet Infos
-INTERNET_IP=$(curl ifconfig.co)
+INTERNET_IP=$(curl ifconfig.co 2> /dev/null)
 
 
 # Disk over threshold
