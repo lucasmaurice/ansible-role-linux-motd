@@ -1,11 +1,8 @@
-
-Linux Motd [![Build Status](https://travis-ci.org/lucasmaurice/ansible-role-linux-motd.svg?branch=master)](https://travis-ci.org/lucasmaurice/ansible-role-linux-motd)
-=========
+# Ansible Role: Linux Motd [![Build Status](https://travis-ci.org/lucasmaurice/ansible-role-linux-motd.svg?branch=master)](https://travis-ci.org/lucasmaurice/ansible-role-linux-motd)
 
 Install a standardized welcome message on a **Debian** or a **RedHat** host.
 
-Role Variables
---------------
+## Role Variables
 
 Available variables are listed below, along with default values (see defaults/main.yml):
 
@@ -39,8 +36,7 @@ users: []
 
 - `users`: Global variable containing all the users. Will disable the default motd on all listed users.
 
-Example Playbook
-----------------
+## Example Playbook
 
 This is an example of how to use this role:
 
@@ -94,7 +90,6 @@ Running on Debian GNU/Linux 9 with kernel 4.15.17-1-pve
 root@djls-domotic:~$
 ```
 
-License
--------
+## License
 
-WTFPL
+[![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)](https://http://www.wtfpl.net)
