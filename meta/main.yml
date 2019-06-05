@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: sonic
-  description: This role is suposed to install the default and standardized linux MOTD on our systems.
+  description: This role is suposed to install the default and standardized linux MOTD on Ubuntu|Debian|Redhat-based machines.
   company: djls
 
   license: WTFPL
