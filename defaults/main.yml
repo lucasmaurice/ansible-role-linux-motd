@@ -5,6 +5,8 @@ MOTD_CONTACT: sysadmin@lanets.ca
 MOTD_PRIVATE_INTERFACE: x
 MOTD_PUBLIC_INTERFACE: x
 
+# Welcome message accent color. Select a color here: https://misc.flogisoft.com/bash/tip_colors_and_formatting (Dont forget the `\e[38;5;` and the `m`)
+MOTD_COLOR_ACCENT: \e[38;5;202m
 # Welcome message and font. Select a font here: http://www.figlet.org/fontdb.cgi
 MOTD_WELCOME_FONT: banner3
 MOTD_WELCOME: DHMTL

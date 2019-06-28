@@ -8,8 +8,7 @@ DISK_WARN_THRESHOLD=90
 
 # Text color settings
 COLOR_WARNING="\e[91m"
-COLOR_ACCENT="\e[94m"
-COLOR_ACCENT="\e[38;5;202m"
+COLOR_ACCENT="{{ MOTD_COLOR_ACCENT }}"
 COLOR_RESET="\e[0m"
 
 # System date
