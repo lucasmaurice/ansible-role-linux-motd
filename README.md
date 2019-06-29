@@ -14,6 +14,8 @@ MOTD_CONTACT: sysadmin@lanets.ca
 MOTD_PRIVATE_INTERFACE: x
 MOTD_PUBLIC_INTERFACE: x
 
+# Welcome message accent color. Select a color here: https://misc.flogisoft.com/bash/tip_colors_and_formatting (Dont forget the `\e[38;5;` and the `m`)
+MOTD_COLOR_ACCENT: \e[38;5;202m
 # Welcome message and font. Select a font here: http://www.figlet.org/fontdb.cgi
 MOTD_WELCOME_FONT: banner3
 MOTD_WELCOME: DHMTL
@@ -29,6 +31,8 @@ users: []
 - `MOTD_PUBLIC_INTERFACE`: Network interface you want to read the public Ip address to show.
 
 > Set the network interface to *x* or do not set it for no interface.
+
+- `MOTD_COLOR_ACCENT`: The colors of the welcome message accents. (Select a color on the [Bash Colors List](https://misc.flogisoft.com/bash/tip_colors_and_formatting) ; **Dont forget the `\e[38;5;` and the `m`**)
 
 - `MOTD_WELCOME_FONT`: The font of the welcome word. (Select a font on the [Figlet Website](http://www.figlet.org/fontdb.cgi))
 
