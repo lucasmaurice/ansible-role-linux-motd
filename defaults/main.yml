@@ -2,7 +2,7 @@
 MOTD_CONTACT: sysadmin@lanets.ca
 
 # Name of the interfaces to read the Ip Adresses.
-MOTD_PRIVATE_INTERFACE: x
+MOTD_PRIVATE_INTERFACE: "{{ ansible_default_ipv4.interface }}"
 MOTD_PUBLIC_INTERFACE: x
 
 # Welcome message accent color. Select a color here: https://misc.flogisoft.com/bash/tip_colors_and_formatting (Dont forget the `\e[38;5;` and the `m`)
