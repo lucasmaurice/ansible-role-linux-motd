@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: linux-motd
-  
+
   author: sonic
   description: This role is suposed to install the default and standardized linux MOTD on Ubuntu|Debian|Redhat-based machines.
   company: djls
@@ -31,7 +31,8 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - 9
+        - stretch
+        - buster
     - name: Centos
       versions:
         - 7
