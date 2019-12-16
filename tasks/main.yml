@@ -21,6 +21,7 @@
   with_items:
     - figlet
     - cowsay
+    - jq
 
 - name: Add figlet font to OS.
   get_url:
