@@ -56,7 +56,7 @@ if [ ! "$PRIVATE_INTERFACE" == "x" ]; then
 fi
 
 # Internet Infos
-INTERNET_IP=$(curl ifconfig.co 2> /dev/null)
+INTERNET_IP=$(curl -s https://iplist.cc/api | jq -r '.ip')
 
 
 # Disk over threshold
