@@ -3,10 +3,10 @@ dependency:
   name: galaxy
 driver:
   name: docker
-lint:
-  name: yamllint
-  options:
-    config-file: molecule/default/yaml-lint.yml
+lint: |
+  yamllint --config-file molecule/default/yaml-lint.yml .
+  ansible-lint
+  flake8
 platforms:
   - name: instance
     image: "geerlingguy/docker-${MOLECULE_DISTRO:-debian9}-ansible:latest"
@@ -17,8 +17,7 @@ platforms:
     pre_build_image: true
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
+  lint: ansible-lint
   playbooks:
     converge: ${MOLECULE_PLAYBOOK:-playbook.yml}
 scenario:
@@ -26,16 +25,12 @@ scenario:
   test_sequence:
     - lint
     - destroy
-    # - dependency
     - syntax
     - create
-    # - prepare
     - converge
     - idempotence
-    # - side_effect
     - verify
     - destroy
 verifier:
   name: testinfra
-  lint:
-    name: flake8
+  lint: flake8

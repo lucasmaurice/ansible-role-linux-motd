@@ -100,7 +100,7 @@ fi
 
 # Fortune word
 if [ -f "/usr/games/fortune" ]; then
-    /usr/games/fortune -as | cowsay
+    /usr/games/fortune -as
 fi
 
 echo
