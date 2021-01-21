@@ -35,13 +35,3 @@
     mode: 0755
     owner: root
     group: root
-
-- name: Disable default login message.
-  file:
-    path: /home/{{ item.username }}/.hushlogin
-    owner: "{{ item.username }}"
-    mode: 0755
-    state: touch
-  loop: '{{ users }}'
-  register: touch_log
-  changed_when: touch_log.diff.before.state != "file"
