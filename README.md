@@ -1,4 +1,4 @@
-# Ansible Role: Linux Motd [![Build Status](https://travis-ci.org/lucasmaurice/ansible-role-linux-motd.svg?branch=master)](https://travis-ci.org/lucasmaurice/ansible-role-linux-motd)
+# Ansible Role: Linux Motd [![Build Status](https://travis-ci.com/justereseau/ansible-role-linux-motd.svg?branch=master)](https://travis-ci.com/justereseau/ansible-role-linux-motd)
 
 Install a standardized welcome message on a **Debian** or a **RedHat** host.
 
