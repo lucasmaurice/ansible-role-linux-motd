@@ -3,25 +3,19 @@ language: python
 services: docker
 
 env:
-  global:
-    - ROLE_NAME: linux-motd
   matrix:
-    - MOLECULE_DISTRO: centos7
     - MOLECULE_DISTRO: centos8
-    - MOLECULE_DISTRO: ubuntu1804
-    - MOLECULE_DISTRO: ubuntu1604
-    - MOLECULE_DISTRO: debian9
     - MOLECULE_DISTRO: debian10
 
 install:
   # Install test dependencies.
-  - pip install molecule docker testinfra ansible-lint flake8 yamllint
+  - pip install molecule molecule-docker docker pytest-testinfra ansible-lint flake8 yamllint
 
 before_script:
   # Use actual Ansible Galaxy role name for the project directory.
   - cd ../
-  - mv ansible-role-$ROLE_NAME $ROLE_NAME
-  - cd $ROLE_NAME
+  - mv ansible-role-linux-motd justereseau.linux_motd
+  - cd justereseau.linux_motd
 
 script:
   - molecule --version

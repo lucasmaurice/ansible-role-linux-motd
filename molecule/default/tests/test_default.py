@@ -8,7 +8,6 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 def test_motd_file_exist(host):
     f = host.file('/etc/profile.d/motd.sh')
-
     assert f.exists
     assert f.user == 'root'
     assert f.group == 'root'
